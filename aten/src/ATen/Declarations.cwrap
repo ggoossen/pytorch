@@ -245,6 +245,20 @@
       - real value
 ]]
 [[
+  name: _th_index_max_
+  cname: indexMax
+  types:
+    - Float
+  variants: function
+  return: argument 0
+  arguments:
+    - THTensor* self
+    - arg: long dim
+      wrap_dim: self
+    - THIndexTensor* index
+    - THTensor* source
+]]
+[[
   name: _th_scatter_
   return: argument 0
   cpu_bool: True

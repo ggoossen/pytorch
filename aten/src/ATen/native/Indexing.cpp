@@ -332,6 +332,10 @@ Tensor index_fill(const Tensor & self, int64_t dim, const Tensor & index, const 
   return self.clone(at::MemoryFormat::Preserve).index_fill_(dim, index, source);
 }
 
+Tensor index_max(const Tensor & self, int64_t dim, const Tensor & index, const Tensor & source) {
+  return self.clone().index_max_(dim, index, source);
+}
+
 Tensor scatter(const Tensor & self, int64_t dim, const Tensor & index, const Tensor & source) {
   return self.clone(at::MemoryFormat::Preserve).scatter_(dim, index, source);
 }
